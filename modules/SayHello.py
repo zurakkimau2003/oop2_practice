@@ -1,8 +1,11 @@
-import modules.SayHello as App
+class SayHello:
+    def __init__(self,target="World"):
+        self.target = target
+    def say(self):
+        print(f"Hello, {self.target}!!")
 
-def run():
-    app=App.SayHello("Github")
+if __name__=="__main__":
+    app = SayHello()
     app.say()
-
-if __name__ == '__main__':
-    run()
+    app = SayHello("Someone")
+    app.say()
